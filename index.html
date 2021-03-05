@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <title>Opgave 3</title>
+</head>
+
+
+
+<body>
+    <div>
+        <h1>String mannipulation</h1>
+    </div>
+
+    <div id="app">
+        <input id="InputField" v-model="word" placeholder="Enter text here...">
+        <button id="button" v-on:click="showList" class="btn btn-primary">Show</button>
+        {{message}}
+   
+
+
+        <ol> 
+            <li v-for="word in list"> {{word}} </li>
+        </ol> 
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{list[0]}}</td>
+
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>{{list[1]}}</td>
+
+              </tr>
+              <th scope="row">3</th>
+              <td>{{list[2]}}</td>
+              <tr>
+            </tbody>
+          </table>
+</div>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
